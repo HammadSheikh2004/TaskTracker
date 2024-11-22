@@ -1,0 +1,62 @@
+import React from 'react'
+
+function Cards() {
+    let Data = [
+        {
+            title: "Hello",
+            Description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        },
+        {
+            title: "Hi",
+            Description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        },
+        {
+            title: "Hi",
+            Description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        }
+    ];
+
+    let AboutCard = (card, index) => {
+        return (
+            <div className='container my-4'>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">{card.title}</h5>
+                                <p class="card-text">{card.Description}</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">{card.title}</h5>
+                                <p class="card-text">{card.Description}</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">{card.title}</h5>
+                                <p class="card-text">{card.Description}</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        );
+    };
+
+    return <div className="grid">{Data.map(AboutCard)}</div>;
+
+}
+
+export default Cards
